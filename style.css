@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #d3d3d3;
+}
+.big {
+  padding: 0px;
+  display: flex;
+}
+#content {
+  padding: 0px;
+}
+nav {
+  display: inline-flex;
+  position: sticky;
+  top: 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  width: 80vw;
+  background-color: #323232;
+  border: 1px solid #d3d3d3;
+}
+header {
+  position: sticky;
+  margin-bottom: 10px;
+  top: 0px;
+}
+.sidebar {
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  height: 100vh;
+  width: 20vw;
+  background-color: #333333;
+}
+.sidebar img {
+  border-radius: 50%;
+  width: 20%;
+  height: calc(width);
+}
+.sidebar button {
+  font-size: 16px;
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+}
+.sidebar a,
+div {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+.sidebar a:hover {
+  background-color: #d3d3d3;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sidebar div:hover {
+  background-color: #d3d3d3;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sidebar #premium1:hover {
+  background: linear-gradient(135deg, white, gold);
+  color: #aa6c39;
+  font-weight: bold;
+  font-size: 20px;
+}
+nav a {
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  background-color: #03b57b;
+  color: white;
+  font-size: larger;
+  border-radius: 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #038c6f;
+  font-weight: bold;
+}
+nav input {
+  color: white;
+}
+#premium {
+  background: linear-gradient(135deg, white, gold);
+  color: #aa6c39;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80vw;
+}
+.card {
+  padding: 0px;
+  width: 19vw;
+  height: 20vh;
+  text-align: center;
+  border: 2px solid black;
+  margin-block-end: 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, skyblue, lightblue);
+  color: black;
+}
+.card button {
+  position: relative;
+  top: 70%;
+  padding: 5px;
+  width: 100px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border-width: 0px;
+}
+.card p {
+  font-size: 15;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
