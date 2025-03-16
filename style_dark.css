@@ -1,138 +1,142 @@
-* {
-  margin: 0px;
-  padding: 0px;
+*{
+    margin: 0px;
+    padding: 0px;
 }
-body {
-  background-color: #1a1a1a;
-  color: white;
+body{
+    background-color: #1a1a1a;
+    color: white;
 }
-.big {
-  padding: 0px;
-  display: flex;
+.big{
+    padding: 0px;
+    display: flex;
 }
-#content {
-  padding: 0px;
+#content
+{
+    padding: 0px;
 }
-nav {
-  margin: 0px;
-  display: inline-flex;
-  position: sticky;
-  top: 0px;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 75px;
-  width: 80vw;
-  background-color: #323232;
-  border: 1px solid #d3d3d3;
+nav{
+    display: inline-flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px;
+    width: 80vw;
+    background-color: #323232;
+    border: 1px solid #d3d3d3; 
 }
-header {
-  position: sticky;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  top: 0px;
+nav img{
+    display: inline-block;
+    height: 50px;
+    justify-content: start;
 }
-.sidebar {
-  padding: 10px;
-  position: sticky;
-  top: 0px;
-  text-align: center;
-  color: white;
-  display: inline-block;
-  height: 100vh;
-  width: 20vw;
-  background-color: #333333;
+header{
+    position: sticky;
+    margin-bottom: 10px;
+    top:0px;
 }
-.sidebar img {
-  border-radius: 50%;
-  width: 20%;
-  height: calc(width);
+.sidebar{
+    padding: 10px;
+    position: sticky;
+    top:0px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    height:100vh;
+    width:20vw;
+    background-color: #333333;
 }
-.sidebar button {
-  font-size: 16px;
-  width: 100px;
-  padding: 5px;
-  margin: 10px;
+.sidebar img{
+    border-radius: 50%;
+    width: 20%;
+    height: calc(width);
 }
-.sidebar a,
-div {
-  text-decoration: none;
-  display: block;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
+.sidebar button{
+    font-size: 16px;
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
 }
-.sidebar a:hover {
-  background-color: #d3d3d3;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+.sidebar a,div{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
 }
-.sidebar div:hover {
-  background-color: #d3d3d3;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+.sidebar a:hover{
+    background-color: #d3d3d3;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
-.sidebar #premium1:hover {
-  background: linear-gradient(135deg, white, gold);
-  color: #aa6c39;
-  font-weight: bold;
-  font-size: 20px;
+.sidebar div:hover{
+    background-color: #d3d3d3;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
-nav a {
-  padding: 10px;
-  width: 150px;
-  text-align: center;
-  background-color: #03b57b;
-  color: white;
-  font-size: larger;
-  border-radius: 10px;
-  text-decoration: none;
+.sidebar #premium1:hover{
+    background:-moz-linear-gradient(135deg,white,gold);
+    color:#aa6c39;
+    font-weight: bold;
+    font-size: 20px;
 }
-nav a:hover {
-  background-color: #038c6f;
-  font-weight: bold;
+nav a{
+    padding: 10px;
+    width :150px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    font-size: larger;
+    border-radius: 10px;
+    text-decoration: none;
 }
-nav input {
-  color: white;
+nav a:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
 }
-#premium {
-  background: linear-gradient(135deg, white, gold);
-  color: #aa6c39;
+nav input{
+    color:white;
 }
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 80vw;
+#premium{
+    background:-moz-linear-gradient(135deg,white,gold);
+    color:#aa6c39;
 }
-.card {
-  width: 19vw;
-  height: 20vh;
-  padding: 0px;
-  text-align: center;
-  border: 2px solid black;
-  margin-block-end: 10px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, skyblue, lightblue);
-  color: black;
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80vw;
 }
-.card button {
-  position: relative;
-  top: 70%;
-  padding: 5px;
-  width: 100px;
-  font-size: 18px;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  border-width: 0px;
+.card{
+    width:19vw;
+    height: 20vh;
+    padding: 0px;
+    text-align: center;
+    border: 2px solid black;
+    margin-block-end: 10px;
+    border-radius: 10px;
+    background: -moz-linear-gradient(135deg, #d3d3d3, white);
+    color: black;
 }
-.card p {
-  font-size: 15;
+.card button{
+    position: relative;
+    top: 70%;
+    padding: 5px;
+    width: 100px;
+    font-size: 18px;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    border-width: 0px;
 }
-footer {
-  background-color: black;
-  color: white;
-  padding: 10px;
+.card p{
+    font-size: 15;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
 }
