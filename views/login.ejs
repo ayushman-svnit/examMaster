@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
+</head>
+<body>
+    <div id="container">
+        <h1>Login Here</h1>
+        <form method="POST" action="/users">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" placeholder="Enter Username" name="username"><br>
+            <p>OR</p>
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" placeholder="Enter e-mail" name="email"><br>
+            <label for="password"><span class="required">*</span>Password</label><br>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required><button id="btn" type="button"><i class="fa fa-eye-slash"></i></button><br>
+            <button id="login">Log in</button>
+            <p><a href="http://localhost:3000/register">Click here</a> to Register </p>
+        </form>
+    </div>
+    <script src="/login.js"></script>
+</body>
+</html>

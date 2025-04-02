@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
+<body>
+    <div id="container">
+        <h1>Register Here</h1>
+        <form method="POST" action="/register">
+            <label for="username"><span class="required">*</span>Username</label><br>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required><br>
+            <label for="password"><span class="required">*</span>Password</label><br>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required><button id="btn" type="button"><i class="fa fa-eye-slash"></i></button><br>
+            <label for="email"><span class="required">*</span>E-mail</label><br>
+            <input type="email" id="email" placeholder="Enter e-mail" name="email" required><br>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="Enter Name" name="name"><br>
+            <label for="instId">Institute id</label><br>
+            <input type="text" id="instId" placeholder="Enter Institute id" name="instituteid"><br>
+            <button id="register">Register</button>
+            <p>Already have an account? &MediumSpace;<a href="http://localhost:3000/login">Log in</a></p>
+        </form>
+    </div>
+    <script src="/register.js"></script>
+</body>
+</html>

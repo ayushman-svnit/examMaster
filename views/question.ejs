@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    <div class="ques">
+        <%= ques[0].ques %>
+    </div>
+    <div class="ans">
+        <% if(ques[0].quesType==='single'){ %>
+            <input type="radio" name="options" id="opt1"> 
+            <label for="opt1"><%= ques[0].opt1 %></label><br>
+            <input type="radio" name="options" id="opt2"> 
+            <label for="opt2"><%= ques[0].opt2 %></label><br>
+            <input type="radio" name="options" id="opt3"> 
+            <label for="opt3"><%= ques[0].opt3 %></label><br>
+            <input type="radio" name="options" id="opt4"> 
+            <label for="opt4"><%= ques[0].opt4 %></label><br>
+        <% } 
+            else if(ques[0].quesType==='multiple'){ %>
+            <input type="checkbox" name="options" id="opt1"> 
+            <label for="opt1"><%= ques[0].opt1 %></label><br>
+            <input type="checkbox" name="options" id="opt2"> 
+            <label for="opt2"><%= ques[0].opt2 %></label><br>
+            <input type="checkbox" name="options" id="opt3"> 
+            <label for="opt3"><%= ques[0].opt3 %></label><br>
+            <input type="checkbox" name="options" id="opt4"> 
+            <label for="opt4"><%= ques[0].opt4 %></label><br>
+        <% } 
+        else { %>
+            <label for="input">Ans:</label><br>
+            <input type="text" name="input" id="input">
+        <% } %>
+    </div>
+    <script src="/question.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
+</head>
+<body id="light-mode">
+    <!-- navbar -->
+    <div class="container">
+        <div class="container2">
+            <div class="navbar">
+                <div id="logo"><img src="/logo.png"></div>
+                <a href="http://localhost:3000/users/<%= user._id %>">HOME</a>
+                <a href="http://localhost:3000/<%= user._id %>/history">HISTORY</a>
+                <a href="http://localhost:3000/<%= user._id %>/leaderboard">LEADERBOARD</a>
+                <a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a>
+                <button id="theme-toggle">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+            <!-- cards -->
+            <div class="content">
+                <% for(let i=0;i<cards.length;i++){ %>
+                    <div class="card">
+                        <p><b>JEE Advanced <%= cards[i].year %></b></p>
+                        <p><b>Total number of questions :&MediumSpace;</b><%= cards[i].numOfQues %></p>
+                        <p><b>Total score :&MediumSpace;</b><%= cards[i].score %></p>
+                        <form method="GET" action="/users/<%= cards[i]._id %>/<%= user._id %>">
+                            <p><button>START TEST</button></p>
+                        </form>
+                    </div>
+                <% } %>
+                </div>
+            </div>
+            <!-- sidebar -->
+            <div class="sidebar">
+                <img src="/pfp.png" alt="Profile image" id="pfp">
+                <p><b>Username : &MediumSpace;</b><%= user.username %></p>
+                <form action="#">
+                    <button>Edit Profile</button>
+                </form>    
+                <button  class = "premium"><a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a></button>
+                <form action="#">
+                    <button>LOG OUT</button>
+                </form>   
+            </div> 
+        </div>
+    <script src="/home.js"></script>
+</body>
+</html>

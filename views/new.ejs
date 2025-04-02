@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Questions</title>
+</head>
+<body>
+    <form method="POST" action="/">
+        <p>host id:</p>
+        <input type="text" name="hostid" placeholder="hostid">
+        <p>paper</p>
+        <input type="radio" name="paper" value="1">1
+        <input type="radio" name="paper" value="2">2
+        <p>subject (math,phy,chem)</p>
+        <input type="text" name="subject" placeholder="Subject">
+        <p>Question type(single,multiple,num)</p>
+        <input type="text" name="quesType" placeholder="Question type">
+        <p>ques</p>
+        <textarea name="ques" placeholder="ques"></textarea>
+        <p>is image</p>
+        <input type="radio" name="isImg" value="true">true
+        <input type="radio" name="isImg" value="false">false
+        <p>quesImg(link)</p>
+        <input type="text" name="quesImg" placeholder="quesImg">
+        <p>is option image</p>
+        <input type="radio" name="isOptImg" value="true">true
+        <input type="radio" name="isOptImg" value="false">false
+        <p>option 1 string</p>
+        <input type="text" name="opt1" placeholder="1">;   
+        <p>option 1 image link</p>
+        <input type="text" name="opt1Img">     
+        <p>option 2 string</p>
+        <input type="text" name="opt2" placeholder="2">;   
+        <p>option 2 image link</p>
+        <input type="text" name="opt2Img">     
+        <p>option 3 string</p>
+        <input type="text" name="opt3" placeholder="3">;   
+        <p>option 3 image link</p>
+        <input type="text" name="opt3Img">     
+        <p>option 4 string</p>
+        <input type="text" name="opt4" placeholder="4">;   
+        <p>option 4 image link</p>
+        <input type="text" name="opt4Img">     
+        <p>ans for single and multiple in form of string</p>
+        <input type="text" name="ans">
+        <p>input box for numerical</p>
+        <input type="text" name="input" >
+        <button type="reset">RESET</button>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>
