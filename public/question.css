@@ -1,0 +1,430 @@
+* {
+    transition: background 0.4s linear, color 0.4s linear;
+}
+
+body,
+head {
+    background-color: #2563eb;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* don't change below two css */
+.input {
+    display: none;
+}
+
+.ansdisplay {
+    display: none;
+}
+
+.infobox {
+    display: none;
+}
+
+/* _______________________________ */
+.navdiv {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    animation: smoothBlink 1s ease-in-out infinite 0.5s;
+}
+
+@keyframes smoothBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.navdiv:hover {
+    background: linear-gradient(135deg, #fca5a5, #f87171);
+    box-shadow: 0 0 10px rgba(248, 113, 113, 0.4);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+p {
+    font-weight: 500;
+}
+
+.at,
+.unat {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f59e0b;
+    height: 50px;
+    width: 50px;
+    font-size: larger;
+    font-weight: 700;
+    border-radius: 10%;
+    padding: 3px;
+}
+
+.atm {
+    background-color: #22c55e;
+}
+
+.unatm {
+    background-color: #ef4444;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.item1 {
+    width: 75%;
+    height: 100%;
+    /* background-color: #f0f4ff; */
+    /* background-color: #f0f4ff; */
+    /* background: linear-gradient(135deg, #e0f2fe, #f0f9ff); */
+    /* background-color: #e0f2fe; */
+    /* background: linear-gradient(135deg, #60a5fa, #c4b5fd); */
+    /* background: linear-gradient(135deg, #3b82f6, #6366f1); */
+    /* background: linear-gradient(135deg, #93c5fd, #a78bfa); */
+    /* background-color: #60a5fa; */
+    background-color: #a78bfa;
+    padding: 50px;
+}
+
+.main {
+    background-color: white;
+    padding: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+#instruction {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    max-height: 350px;
+    width: 75%;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#instruction img {
+    width: 100%;
+}
+
+.ques {
+    background-color: white;
+    font-size: large;
+}
+
+.ques img {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#quesNum {
+    font-size: 18.72px;
+    font-weight: 700;
+}
+
+.item2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    /* background: linear-gradient(135deg, #3b82f6, #6366f1);  */
+    /* background: linear-gradient(135deg, #93c5fd, #818cf8); */
+    /* background: linear-gradient(135deg, #3b82f6, #6366f1);  */
+    /* background: linear-gradient(135deg, #93c5fd, #818cf8); */
+    /* color: #f8fafc; */
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #f8fafc;
+    padding: 25px 10px;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    transition: background 0.5s ease;
+}
+
+.ans {
+    font-size: medium;
+}
+
+.ans img {
+    height: 70px;
+}
+
+#prev,
+#exit,
+#clear,
+#submit,
+#next {
+    padding: 10px 20px;
+    margin: 6px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+#prev {
+    background-color: #3b82f6;
+}
+
+#prev:hover {
+    background-color: #2563eb;
+}
+
+#next {
+    background-color: #10b981;
+}
+
+#next:hover {
+    background-color: #059669;
+}
+
+#clear {
+    background-color: #f59e0b;
+}
+
+#clear:hover {
+    background-color: #d97706;
+}
+
+#exit {
+    background-color: #ef4444;
+    float: left;
+}
+
+#exit:hover {
+    background-color: #dc2626;
+}
+
+#submit {
+    margin-right: 60px;
+    float: right;
+    background-color: #8b5cf6;
+}
+
+#submit:hover {
+    background-color: #7c3aed;
+}
+
+#theme-toggle {
+    transition: transform 0.2s ease;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+.ans input[type="radio"]:checked,
+.ans input[type="checkbox"]:checked {
+    display: none;
+}
+
+.ans label {
+    display: inline-block;
+    width: 90%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.ans input[type="radio"]:checked+label,
+.ans input[type="checkbox"]:checked+label {
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    color: #4c1d95;
+}
+
+/* for tick */
+.ans input[type="radio"]:checked+label::before,
+.ans input[type="checkbox"]:checked+label::before {
+    content: '✓';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #8b5cf6;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(139, 92, 246, 0.6);
+}
+
+.num input:focus {
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.dark-mode {
+
+    body,
+    head {
+        background-color: #0f172a;
+    }
+
+    .item1 {
+        /* background-color: #0f172a;  */
+        background-color: #1e293b;
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
+
+    .item2 {
+        /* background: linear-gradient(135deg, #1e3a8a, #4f46e5); */
+        background: linear-gradient(135deg, #3730a3, #6d28d9);
+        color: #f1f5f9;
+    }
+
+    .navdiv {
+        background: #1d4ed8;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .navdiv:hover {
+        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+    }
+
+    .atm {
+        background-color: #22c55e;
+    }
+
+    .unatm {
+        background-color: #ef4444;
+    }
+
+    #instruction {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+    }
+
+    .ans label {
+        border: 2px solid transparent;
+    }
+
+    .ans input[type="radio"]:checked+label,
+    .ans input[type="checkbox"]:checked+label {
+        border: 2px solid #c084fc;
+        box-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+    }
+
+    .ans input[type="radio"]:checked+label::before,
+    .ans input[type="checkbox"]:checked+label::before {
+        background-color: #a855f7;
+        box-shadow: 0 0 4px rgba(168, 85, 247, 0.6);
+    }
+
+    #prev {
+        background-color: #2563eb;
+    }
+
+    #prev:hover {
+        background-color: #1d4ed8;
+    }
+
+    #next {
+        background-color: #059669;
+    }
+
+    #next:hover {
+        background-color: #047857;
+    }
+
+    #clear {
+        background-color: #d97706;
+    }
+
+    #clear:hover {
+        background-color: #b45309;
+    }
+
+    #exit {
+        background-color: #dc2626;
+    }
+
+    #exit:hover {
+        background-color: #b91c1c;
+    }
+
+    #submit {
+        background-color: #9333ea;
+    }
+
+    #submit:hover {
+        background-color: #7e22ce;
+    }
+
+    #theme-toggle {
+        background-color: #e5e7eb;
+        color: #1f2937;
+    }
+
+    #theme-toggle:hover {
+        background-color: #1f2937;
+        color: white;
+    }
+
+}

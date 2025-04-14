@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link rel="stylesheet" href="/question.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item1">
+            <div class="main">
+                <div id="instruction"></div><hr><br>
+                <div id="quesNum"></div>
+                <div class="ques"></div><br>
+                <div class="ans">
+                    <input type="radio" name="options" id="opt1">
+                    <label for="opt1"></label><br>
+                    <input type="radio" name="options" id="opt2">
+                    <label for="opt2"></label><br>
+                    <input type="radio" name="options" id="opt3">
+                    <label for="opt3"></label><br>
+                    <input type="radio" name="options" id="opt4">
+                    <label for="opt4"></label><br>
+                </div>
+                <div class="num input">
+                    <input type="text" id="num">
+                </div><br><br>
+                <button id="prev">PREVIOUS</button>
+                <button id="clear">CLEAR</button>
+                <button id="next">NEXT</button>
+            </div>
+            <form method="POST" action="/ques/<%= card_id %>/<%= id %>?_method=DELETE">
+                <button id="exit">EXIT TEST</button>
+            </form>
+            <form  method="GET" action="/submission/<%= card_id %>/<%= id %>">
+                <button id="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="item2">
+            <div id="timer">03:00:00</div>
+            <button id="theme-toggle">
+                <i id="theme-icon" class="fa-solid fa-sun"></i>
+            </button>
+            <p>ATTEMPTED</p>
+            <div class="at">0</div>
+            <p>UNATTEMPTED</p>
+            <div class="unat">18</div>
+            <h3>Mathematics</h3>
+            <div id="math">
+
+            </div>
+            <h3>Physics</h3>
+            <div id="phy">
+
+            </div>
+            <h3>Chemistry</h3>
+            <div id="chem">
+
+            </div>
+            <div id="infobox">
+                <%= id %>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="infobox" id="hostid"><%= card_id %></div>
+    <div class="infobox" id="user_id"><%= id %></div>
+    <script  src="/question.js"></script>
+</body>
+
+</html>

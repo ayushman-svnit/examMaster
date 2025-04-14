@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission</title>
+    <link rel="stylesheet" href="/submission.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <button id="theme-toggle">
+        <i id="theme-icon" class="fa-solid fa-sun"></i>
+    </button>
+    <h1>Submission page</h1>
+    <!-- some basic details -->
+    <p id="rank"></p>
+    <p id="score"></p>
+    <div class="container">
+        <p id="percentCorrect"></p>
+        <p id="percentIncorrect"></p>
+        <p id="percentUnatm"></p>
+    </div>
+    <p id="accuracy"></p>
+
+    <!-- to navigate through questions -->
+    <div id="navdivs">
+        <b>Mathematics</b><br>
+        <div id="math"></div>
+        <div class = "subject" id = "math_stat">
+            <p id="percentCorrectMath"></p>
+            <p id="percentIncorrectMath"></p>
+            <p id="percentUnatmMath"></p>
+        </div>
+        <p id="accuracy_math"></p>
+
+        <b>Physics</b><br>
+        <div id="phy"></div>
+        <div class = "subject" id = "phy_stat">
+            <p id="percentCorrectPhy"></p>
+            <p id="percentIncorrectPhy"></p>
+            <p id="percentUnatmPhy"></p>
+        </div>
+        <p id="accuracy_phy"></p>
+
+        <b>Chemistry</b><br>
+        <div id="chem"></div>
+        <div class = "subject" id = "math_stat">
+            <p id="percentCorrectChem"></p>
+            <p id="percentIncorrectChem"></p>
+            <p id="percentUnatmChem"></p>
+        </div>
+        <p id="accuracy_chem"></p>
+
+    </div>
+
+    <!-- popup to see ques, users input and correct and -->
+    <div class="box" id="box">
+        <div class="cross_align"><button id="cross">&#10006;</button></div>
+        <div id="instruction"></div>
+        <div id="quesNum"></div>
+        <div class="ques"></div><br>
+        <div class="options"></div>
+        <p id="userInput"></p>
+        <p id="correctInput"></p>
+    </div>
+
+    <div class="chart">
+    <h2>Subject Distribution</h2>
+    <div class="chart-container">
+    <canvas id="resultPieChart"></canvas></div>
+    </div>
+
+    <form method="get" action="/users/<%= user_id %>">
+        <button>GO TO HOMEPAGE</button>
+    </form>
+
+    <!-- some extra info for developers only -->
+    <div class="infobox" id="hostid"><%= hostid %></div>
+    <div class="infobox" id="user_id"><%= user_id %></div>
+    <script src="/submission.js"></script>
+</body>
+</body>
+</html>
+

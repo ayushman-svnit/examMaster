@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamMaster</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .ch{
+            margin-left: 25px;
+        }
+        .chch{
+            margin-left: 25px;
+        }
+        #consent{
+            display: flex;
+        }
+        #consent p{
+            margin: 0px;
+        }
+        #strt{
+            display: flex;
+            justify-content: center;
+        }
+        #strt button{
+            padding: 10px;
+            width: 150px;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: monospace;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>JEE Advanced Mock Test</h1>
+    <h2>General Instructions:</h2>
+    <p>
+      1. The clock will be set at the server. The countdown timer at the top of
+      screen will display the remaining time available for you to complete the
+      examination. When the times reaches zero, the examination will end by
+      itself.
+    </p>
+    <p>2. The question pallette displayed on the right side of screen will show the status of each question.</p>
+    <p>3. <b>Navigating to a Question :</b>
+        <p class="ch">1. Click on the question number in the question pallette to go to that numbered question directly.</p>
+        <p class="ch">2. Click on Next to go to next question and previous for previos question.</p>
+        <p class="ch">3. Click on <b>Clear</b> to clear the response.</p>
+        <p class="ch">4. By clicking on the option, your response will be automatically saved.</p>
+    </p>
+    <p>4. <b>Answering a question :</b>
+        <p class="ch"><b>For answering Single Correct Questions</b>
+            <p class="chch">1. Choose one option from the 4 options (A,B,C,D) given below the question, click on the bubble placed before the chosen option.</p>
+            <p class="chch">2. To deselect your option, click on the <b>Clear</b> button.</p>
+            <p class="chch">3. To change your answer, click on the bubble of another option.</p>
+            <p class="chch">4. Your answer will be saved automatically on clicking <b>Next</b> button.</p>
+        </p>
+        <p class="ch">
+            <b>For answering Multiple Correct Questions</b>
+            <p class="chch">1. Choose one or more option(s) from the 4 options (A,B,C,D) given below the question, click on the checkbox placed before each option.</p>
+            <p class="chch">2. To deselect your option, click on the checkbox again.</p>
+            <p class="chch">3. Your answer will be saved automatically on clicking <b>Next</b> button.</p>
+        </p>
+        <p class="ch"><b>For answering Numerical Type Questions</b>
+            <p class="chch">1. To enter the answer, input the value from your Keyboard.</p>
+            <p class="chch">2. To clear your response, click on <b>Clear</b> button.</p>
+            <p class="chch">3. Click on <b>Next</b> button to save your response ans move to the next question.</p>
+        </p>
+    </p>
+    <p>5. <b>READ ALL THE INSTRUCTIONS CAREFULLY GIVEN ABOVE EACH QUESTION.</b></p>
+    <form method="GET" action="/ques/<%= card_id %>/<%= id %>">
+        <div id="consent">
+            <input type="checkbox" name="consent" id="cb" required>
+            <label for="cb">I agree that I've read and understood all the instructions and informations carefully.</label>
+        </div>
+        <div id="strt">
+        <button>START TEST</button>
+        </div>
+    </form>
+    <form method="GET" action="/users/<%= id %>">
+        <div id="strt">
+        <button>GO BACK TO HOMEPAGE</button>
+        </div>
+    </form>
+  </body>
+</html>
