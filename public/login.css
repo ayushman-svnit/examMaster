@@ -94,5 +94,6 @@ button {
 #login {
     margin-bottom: 10px;
     width: 95%;
+    cursor: pointer;
     border-radius: 10px;
 }
