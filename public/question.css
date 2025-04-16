@@ -4,7 +4,7 @@
 
 body,
 head {
-    background-color: #2563eb;
+    background-color: #f5f7fa;
     padding: 0px;
     margin: 0px;
 }
@@ -18,7 +18,8 @@ head {
     display: none;
 }
 
-.infobox {
+.infobox,
+#infobox {
     display: none;
 }
 
@@ -59,9 +60,8 @@ head {
 }
 
 .navdiv:hover {
-    background: linear-gradient(135deg, #fca5a5, #f87171);
-    box-shadow: 0 0 10px rgba(248, 113, 113, 0.4);
-    transform: scale(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -100,15 +100,7 @@ p {
 .item1 {
     width: 75%;
     height: 100%;
-    /* background-color: #f0f4ff; */
-    /* background-color: #f0f4ff; */
-    /* background: linear-gradient(135deg, #e0f2fe, #f0f9ff); */
-    /* background-color: #e0f2fe; */
-    /* background: linear-gradient(135deg, #60a5fa, #c4b5fd); */
-    /* background: linear-gradient(135deg, #3b82f6, #6366f1); */
-    /* background: linear-gradient(135deg, #93c5fd, #a78bfa); */
-    /* background-color: #60a5fa; */
-    background-color: #a78bfa;
+    background-color: #f5f7fa;
     padding: 50px;
 }
 
@@ -120,6 +112,7 @@ p {
     border: none;
     border-radius: 20px;
     margin-right: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #instruction {
@@ -323,29 +316,21 @@ p {
 
     body,
     head {
-        background-color: #0f172a;
+        background-color: #1A1A1A;
     }
 
     .item1 {
-        /* background-color: #0f172a;  */
-        background-color: #1e293b;
-        background: linear-gradient(135deg, #1e293b, #0f172a);
+        background-color: #1A1A1A;
     }
 
     .item2 {
-        /* background: linear-gradient(135deg, #1e3a8a, #4f46e5); */
-        background: linear-gradient(135deg, #3730a3, #6d28d9);
+        background: #282828;
         color: #f1f5f9;
     }
 
     .navdiv {
         background: #1d4ed8;
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .navdiv:hover {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
-        box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
     }
 
     .atm {
