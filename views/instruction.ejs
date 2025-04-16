@@ -5,34 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExamMaster</title>
     <style>
-        h1{
-            text-align: center;
-        }
-        .ch{
-            margin-left: 25px;
-        }
-        .chch{
-            margin-left: 25px;
-        }
-        #consent{
-            display: flex;
-        }
-        #consent p{
-            margin: 0px;
-        }
-        #strt{
-            display: flex;
-            justify-content: center;
-        }
-        #strt button{
-            padding: 10px;
-            width: 150px;
-            border-radius: 8px;
-            font-weight: bold;
-            background-color: #1a1a1a;
-            color: #fff;
-            font-family: monospace;
-        }
+        
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Headings */
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  /* Paragraph Styling */
+  p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  /* Indented instructions */
+  .ch {
+    margin-left: 25px;
+    color: #444;
+  }
+  
+  .chch {
+    margin-left: 50px;
+    color: #555;
+  }
+  
+  /* Consent checkbox row */
+  #consent {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 25px;
+  }
+  
+  #consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .imp{
+    color: red;
+  }
+
+  #consent p {
+    margin: 0 0 0 10px;
+    font-size: 1rem;
+    color: #222;
+  }
+  
+  /* Start Test Button Section */
+  #strt {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  #strt button {
+    padding: 12px 20px;
+    width: 180px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #0077cc;
+    color: #fff;
+    font-family: monospace;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #strt button:hover {
+    background-color: #005fa3;
+    transform: scale(1.03);
+  }
+  
+  #strt button:active {
+    transform: scale(0.98);
+    background-color: #004a80;
+  }
+
+  form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+  form button {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+input:checked{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 90%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+input:checked+label,
+input:checked+label {
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    color: #4c1d95;
+}
+
+/* for tick */
+input:checked+label::before,
+input:checked+label::before {
+    content: '✓';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #8b5cf6;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(139, 92, 246, 0.6);
+}
     </style>
   </head>
   <body>

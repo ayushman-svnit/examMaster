@@ -288,6 +288,7 @@ input[type="text"]{
 
 #theme-toggle {
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 #theme-toggle:hover {

@@ -6,7 +6,10 @@ const historySchema=new mongoose.Schema({
     date:String,
     time:String,
     year:Number,
-    score: Number
+    score:{ 
+        type:Number,
+        default:0
+    }
 });
 
 const History=mongoose.model("History",historySchema);
