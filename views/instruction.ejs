@@ -5,231 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExamMaster</title>
     <style>
-      /* General Reset and Fonts */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-        padding: 20px;
-      }
+        /* General Reset and Fonts */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        /* Headings */
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        /* Paragraph Styling */
+        p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        
+        /* Indented instructions */
+        .ch {
+            margin-left: 25px;
+            color: #444;
+        }
+        
+        .chch {
+            margin-left: 50px;
+            color: #555;
+        }
+        
+        /* Consent checkbox row */
+        #consent {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 25px;
+        }
+        
+        #consent input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .imp{
+            color: red;
+        }
 
-      /* Headings */
-      h1 {
-        text-align: center;
-        font-size: 2.2rem;
-        color: #222;
-        margin-bottom: 10px;
-      }
+        #consent p {
+            margin: 0 0 0 10px;
+            font-size: 1rem;
+            color: #222;
+        }
+        
+        /* Start Test Button Section */
+        #strt {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        #strt button {
+            padding: 12px 20px;
+            width: 180px;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: #0077cc;
+            color: #fff;
+            font-family: monospace;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        #strt button:hover {
+            background-color: #005fa3;
+            transform: scale(1.03);
+        }
+        
+        #strt button:active {
+            transform: scale(0.98);
+            background-color: #004a80;
+        }
 
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        color: #444;
-      }
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-      /* Paragraph Styling */
-      p {
-        margin: 10px 0;
-        font-size: 1rem;
-      }
+        form button {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-      /* Indented instructions */
-      .ch {
-        margin-left: 25px;
-        color: #444;
-      }
+        form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
 
-      .chch {
-        margin-left: 50px;
-        color: #555;
-      }
+        input:checked{
+            display: none;
+        }
 
-      /* Consent checkbox row */
-      #consent {
-        display: flex;
-        align-items: center;
-        margin-top: 30px;
-        margin-left: 25px;
-      }
+        label {
+            text-align: left;
+            color: red;
+            display: inline-block;
+            width: 90%;
+            padding: 10px 16px;
+            margin: 8px 0;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-      #consent input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
-        cursor: pointer;
-      }
+        input:checked+label,
+        input:checked+label {
+            border: 2px solid #8b5cf6;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+            color: #4c1d95;
+        }
 
-      .imp {
-        color: red;
-      }
-
-      #consent p {
-        margin: 0 0 0 10px;
-        font-size: 1rem;
-        color: #222;
-      }
-
-      /* Start Test Button Section */
-      #strt {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-      }
-
-      #strt button {
-        padding: 12px 20px;
-        width: 180px;
-        border-radius: 10px;
-        font-weight: bold;
-        background-color: #0077cc;
-        color: #fff;
-        font-family: monospace;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      }
-
-      #strt button:hover {
-        background-color: #005fa3;
-        transform: scale(1.03);
-      }
-
-      #strt button:active {
-        transform: scale(0.98);
-        background-color: #004a80;
-      }
-
-      form {
-        text-align: center;
-        margin-top: 30px;
-      }
-
-      form button {
-        background: linear-gradient(135deg, #3498db, #2c3e50);
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        font-size: 1.1rem;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      form button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      }
-
-      input:checked {
-        display: none;
-      }
-
-      label {
-        display: inline-block;
-        width: 90%;
-        padding: 10px 16px;
-        margin: 8px 0;
-        border: 2px solid transparent;
-        border-radius: 12px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      input:checked + label,
-      input:checked + label {
-        border: 2px solid #8b5cf6;
-        box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
-        color: #4c1d95;
-      }
-
-      /* for tick */
-      input:checked + label::before,
-      input:checked + label::before {
-        content: "✓";
-        position: absolute;
-        left: -30px;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 20px;
-        width: 20px;
-        background-color: #8b5cf6;
-        color: white;
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 20px;
-        border-radius: 50%;
-        box-shadow: 0 0 4px rgba(139, 92, 246, 0.6);
-      }
+        /* for tick */
+        input:checked+label::before,
+        input:checked+label::before {
+            content: '✓';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 20px;
+            background-color: #8b5cf6;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(139, 92, 246, 0.6);
+        }
     </style>
   </head>
   <body>
     <h1>JEE Advanced Mock Test</h1>
     <h2>General Instructions:</h2>
     <p>
-      1. The timer at the top of the screen will show the remaining time. The
-      exam will automatically end when the time is over.
+      1. The clock will be set at the server. The countdown timer at the top of
+      screen will display the remaining time available for you to complete the
+      examination. When the times reaches zero, the examination will end by
+      itself.
     </p>
-    <p>
-      2. The question palette on the right side will show the status of each
-      question.
+    <p>2. The question pallette displayed on the right side of screen will show the status of each question.</p>
+    <p>3. <b>Navigating to a Question :</b>
+        <p class="ch">1. Click on the question number in the question pallette to go to that numbered question directly.</p>
+        <p class="ch">2. Click on Next to go to next question and previous for previos question.</p>
+        <p class="ch">3. Click on <b>Clear</b> to clear the response.</p>
+        <p class="ch">4. By clicking on the option, your response will be automatically saved.</p>
     </p>
-    <p>3. <b>Navigating Between Questions:</b></p>
-    <p class="ch">
-      • Click on a question number in the palette to go to that question
-      directly.
+    <p>4. <b>Answering a question :</b>
+        <p class="ch"><b>For answering Single Correct Questions</b>
+            <p class="chch">1. Choose one option from the 4 options (A,B,C,D) given below the question, click on the bubble placed before the chosen option.</p>
+            <p class="chch">2. To deselect your option, click on the <b>Clear</b> button.</p>
+            <p class="chch">3. To change your answer, click on the bubble of another option.</p>
+            <p class="chch">4. Your answer will be saved automatically on clicking <b>Next</b> button.</p>
+        </p>
+        <p class="ch">
+            <b>For answering Multiple Correct Questions</b>
+            <p class="chch">1. Choose one or more option(s) from the 4 options (A,B,C,D) given below the question, click on the checkbox placed before each option.</p>
+            <p class="chch">2. To deselect your option, click on the checkbox again.</p>
+            <p class="chch">3. Your answer will be saved automatically on clicking <b>Next</b> button.</p>
+        </p>
+        <p class="ch"><b>For answering Numerical Type Questions</b>
+            <p class="chch">1. To enter the answer, input the value from your Keyboard.</p>
+            <p class="chch">2. To clear your response, click on <b>Clear</b> button.</p>
+            <p class="chch">3. Click on <b>Next</b> button to save your response ans move to the next question.</p>
+        </p>
     </p>
-    <p class="ch">
-      • Use the “Next” and “Previous” buttons to navigate sequentially.
-    </p>
-    <p class="ch">• Click “Clear” to remove your selected response.</p>
-    <p class="ch">
-      • Clicking an option will automatically save your response.
-    </p>
-
-    <p>4. <b>Answering Questions:</b></p>
-    <p class="ch"><b>Single Correct Type</b></p>
-    <p class="chch">
-      • Click on the option to select it. Only one option can be selected.
-    </p>
-    <p class="chch">• Click “Clear” to deselect your choice.</p>
-    <p class="chch">
-      • You can change your answer by clicking a different option.
-    </p>
-
-    <p class="ch"><b>Multiple Correct Type</b></p>
-    <p class="chch">• Click on one or more options to select them.</p>
-    <p class="chch">• Click again on an option to deselect it.</p>
-
-    <p class="ch"><b>Numerical Type</b></p>
-    <p class="chch">• Enter your answer using the keyboard.</p>
-    <p class="chch">• Use the “Clear” button to erase your input.</p>
-
-    <p>
-      <b class="imp"
-        >5. Please read all instructions carefully before each question.</b
-      >
-    </p>
-
-    <div id="consent">
-      <input type="checkbox" name="consent" id="consent-checkbox" />
-      <label for="consent-checkbox"
-        >I have read and understood all the instructions.</label
-      >
-    </div>
-
-    <div id="strt">
-      <button>START TEST</button>
-    </div>
-    <form method="get" action="/users/<%= user_id %>">
-      <button>GO TO HOMEPAGE</button>
+    <p>5. <b>READ ALL THE INSTRUCTIONS CAREFULLY GIVEN ABOVE EACH QUESTION.</b></p>
+    <form method="GET" action="/ques/<%= card_id %>/<%= id %>">
+        <div id="consent">
+            <input type="checkbox" name="consent" id="cb" required>
+            <label for="cb">I agree that I've read and understood all the instructions and informations carefully.</label>
+        </div>
+        <div id="strt">
+        <button>START TEST</button>
+        </div>
+    </form>
+    <form method="GET" action="/users/<%= id %>">
+        <div id="strt">
+        <button>GO BACK TO HOMEPAGE</button>
+        </div>
     </form>
   </body>
 </html>
