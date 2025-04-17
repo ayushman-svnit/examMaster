@@ -237,12 +237,12 @@ async function initialise() {
     let percentIncorrectMath = (incorrect_math / (ques.length / 3) * 100).toFixed(5);
     let percentUnatmMath = (100 - percentCorrectMath - percentIncorrectMath).toFixed(5);
 
-    let percentCorrectPhy = (correct.length / (ques.length / 3)* 100).toFixed(5);
-    let percentIncorrectPhy = (incorrect.length / (ques.length / 3)* 100).toFixed(5);
+    let percentCorrectPhy = (correct_phy / (ques.length / 3)* 100).toFixed(5);
+    let percentIncorrectPhy = (incorrect_phy / (ques.length / 3)* 100).toFixed(5);
     let percentUnatmPhy = (100 - percentCorrectPhy - percentIncorrectPhy).toFixed(5);
 
-    let percentCorrectChem = (correct.length / (ques.length / 3) * 100).toFixed(5);
-    let percentIncorrectChem = (incorrect.length / (ques.length / 3) * 100).toFixed(5);
+    let percentCorrectChem = (correct_chem / (ques.length / 3) * 100).toFixed(5);
+    let percentIncorrectChem = (incorrect_chem / (ques.length / 3) * 100).toFixed(5);
     let percentUnatmChem = (100 - percentCorrectChem - percentIncorrectChem).toFixed(5);
 
     let accuracy = correct.length / (correct.length + incorrect.length) * 100;
