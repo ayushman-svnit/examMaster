@@ -25,4 +25,4 @@ A simple and responsive web application designed to streamline and organize exam
 
 ## © ayushman-svnit, jenil1236, Coder-Vineet
 
-[Open the PDF](jamt.pdf)
+![PDF icon](https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg)[Open the PDF](jamt.pdf)
