@@ -19,9 +19,8 @@
                 <a href="http://localhost:3000/<%= user._id %>/leaderboard">LEADERBOARD</a>
                 <a href="http://localhost:3000/<%= user._id %>/resources">RESOURCES</a>
                 <a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a>
-                <button id="theme-toggle">
-                    <i id="theme-icon" class="fa-solid fa-sun"></i>
-                </button>
+                <a href="http://localhost:3000/contactus">CONTACT US</a>
+                <a href="http://localhost:3000/aboutus">ABOUT US</a>
             </div>
             <!-- leaderboard -->
             <div class="content">
@@ -49,6 +48,9 @@
                 <img src=<%= user.profile %> alt="Profile image" id="pfp">
                 <p><b>Username : &MediumSpace;</b><%= user.username %></p>
                 <p><b>Name : &MediumSpace;</b><%= user.name %></p>
+                <button id="theme-toggle">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
                 <button id="edit">Edit Profile</button>
                 <button  class = "premium"><a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a></button>
                 <form method="GET" action="http://localhost:3000/login">

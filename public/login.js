@@ -35,7 +35,7 @@ form.addEventListener("submit", function (event) {
             else if (str[i] >= '0' && str[i] <= '9') num++;
             else spechar++;
         }
-        if (caps == 0 && small == 0 && num == 0 && spechar == 0) {
+        if (caps == 0 || small == 0 || num == 0 || spechar == 0) {
             event.preventDefault(); // Prevent form submission
         }
         if (str.length < 8) {
