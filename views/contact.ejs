@@ -6,10 +6,39 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
+    <style>
+        label{
+            padding: 10px 5px;
+            margin-left: 0;
+        }
+        input{
+            padding: 10px 5px;
+            margin: 10px 0px;
+        }
+        select{
+            padding: 5px;
+            margin: 10px 0px;
+        }
+        .txtar{
+            width: 21.5vw;
+            height: 25vh;
+        }
+        #connect i{
+            font-size: 30px;
+            padding: 10px;
+        }
+        .dark-mode .txtar{
+            background-color: rgb(49, 49, 49);
+            color: #fff;
+        }
+        .dark-mode #connect i{
+            color: #fff;
+        }
+    </style>
 </head>
 <body id="light-mode">
     <!-- navbar -->
-    <div id="main"></div>
+    <div id="main">
     <div class="container">
         <div class="container2">
             <div class="navbar">
@@ -24,9 +53,66 @@
             </div>
             <!-- cards -->
             <div class="content">
-
-    
+                <div id="report">
+                    <fieldset>
+                    <legend><b>Report your issue here</b></legend>
+                    <label for="paper">
+                        Paper Year: 
+                        <select name="paperY" id="paperY">
+                            <option value="sel">Select Paper</option>
+                            <option value="2024">JEE Advanced 2024</option>
+                            <option value="2023">JEE Advanced 2023</option>
+                            <option value="2022">JEE Advanced 2022</option>
+                            <option value="2021">JEE Advanced 2021</option>
+                            <option value="2020">JEE Advanced 2020</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label for="pap">
+                        Paper Shift :
+                        <select name="paperS" id="paperS">
+                            <option value="sel">Select Shift</option>
+                            <option value="I">Paper 1</option>
+                            <option value="II">Paper 2</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label for="sub">
+                        Subject :
+                        <select name="subject" id="subject">
+                            <option value="sel">Select Subject</option>
+                            <option value="p">Physics</option>
+                            <option value="c">Chemisrty</option>
+                            <option value="m">Mathematics</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label for="qno">
+                        Enter Question Number :
+                        <input type="number">
+                    </label>
+                    <br>
+                    <label for="det">
+                        <textarea name="txt" class="txtar" placeholder="Describe your issue here..."></textarea>
+                    </label>
+                    </fieldset>
                 </div>
+                <div id="feedback">
+                    <fieldset>
+                    <legend><b>Please provide your valuable feedback here...</b></legend>
+                    <textarea name="txt" class="txtar" placeholder="Start writing here..."></textarea>
+                    </fieldset>
+                </div>
+                <div id="connect">
+                    <fieldset>
+                    <legend><b>Connect With Us:</b></legend>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    </fieldset>
+                </div>
+                </div>
+            </div>
             </div>
             <!-- sidebar -->
             <div class="sidebar">

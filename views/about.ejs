@@ -6,6 +6,36 @@
     <title>About Us</title>
     <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
+    <style>
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0px 20px;
+        }
+        .founders{
+            width: 25vw;
+            text-align: center;
+        }
+        .founders img{
+            width: 200px;
+            aspect-ratio: 1;
+            text-align: center;
+        }
+        .founders legend{
+            text-align: center;
+            font-size: 18px;
+        }
+        .social i{
+            font-size: 30px;
+            color: black;
+            padding: 10px;
+        }
+        .dark-mode .social i{
+            color: #fff;
+        }
+    </style>
 </head>
 <body id="light-mode">
     <!-- navbar -->
@@ -24,10 +54,47 @@
             </div>
             <!-- cards -->
             <div class="content">
-
-    
+                <div id="ayushman" class="founders">
+                    <fieldset>
+                        <legend><b>Ayushman Singh</b></legend>
+                        <img src="http://localhost:8000/fnd1.jpg" alt="">
+                        <p>Hi, I am Ayushman Singh, a Computer Science Engineering student at NIT Surat. I am passionate about web development, competitive programming and DSA. I enjoy exploring new technologies, solving real world problems, and continuously improving my technical skills.</p>
+                        <p>Let's connect and create something impactful !</p>
+                        <div class="social">
+                            <a href="https://www.instagram.com/ayushman_2704/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ayushmansingh27/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:singhayushman291@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="jenil" class="founders">
+                    <fieldset>
+                        <legend><b>Jenil Prajapati</b></legend>
+                        <img src="http://localhost:8000/fnd2.jpg" alt="">
+                        <p>Hey there, I'm Jenil Prajapati, an enthusiastic Computer Science Engineering undergrad at NIT Surat. I'm passionate about full-stack development, DSA, and building tech solutions that make a difference. I believe technology should simplify life, and I love being a part of that change.</p>
+                        <p>Dream big, build bigger !</p>
+                        <div class="social">
+                            <a href="https://www.instagram.com/jenil_prajapati_nit/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/jenil-prajapati-b31505307/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:jenilp2146@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="vineet" class="founders">
+                    <fieldset>
+                        <legend><b>Vineet Gupta</b></legend>
+                        <img src="http://localhost:8000/fnd3.jpg" alt="">
+                        <p>Hello, I'm Vineet Gupta, a Computer Science Engineering student at NIT Surat. I have a keen interest in competitive programming, web development, and data structures and algorithms. I thrive on challenges that test my problem-solving skills and push me to think creatively.</p>
+                        <p>Always curious, always learning !</p>
+                        <div class="social">
+                            <a href="https://www.instagram.com/vineetg123?igsh=MTZ6aDl1Mjk0NTR6Ng=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/vineet-gupta-431396272/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:guptavineet400@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
+        </div>
             <!-- sidebar -->
             <div class="sidebar">
                 <img src=<%= user.profile %> alt="Profile image" id="pfp">
