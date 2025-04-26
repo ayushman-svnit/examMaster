@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Resources</title>
     <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="/resource.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
@@ -20,9 +20,8 @@
                 <a href="http://localhost:3000/<%= user._id %>/leaderboard">LEADERBOARD</a>
                 <a href="http://localhost:3000/<%= user._id %>/resources">RESOURCES</a>
                 <a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a>
-                <button id="theme-toggle">
-                    <i id="theme-icon" class="fa-solid fa-sun"></i>
-                </button>
+                <a href="http://localhost:3000/<%= user._id %>/contactus">CONTACT US</a>
+                <a href="http://localhost:3000/<%= user._id %>/aboutus">ABOUT US</a>
             </div>
             <!-- cards -->
             <div id="content">
@@ -56,6 +55,9 @@
                 <img src=<%= user.profile %> alt="Profile image" id="pfp">
                 <p><b>Username : &MediumSpace;</b><%= user.username %></p>
                 <p><b>Name : &MediumSpace;</b><%= user.name %></p>
+                <button id="theme-toggle">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
                 <button id="edit">Edit Profile</button>
                 <button  class = "premium"><a href="http://localhost:3000/<%= user._id %>/premium">PREMIUM</a></button>
                 <form method="GET" action="http://localhost:3000/login">

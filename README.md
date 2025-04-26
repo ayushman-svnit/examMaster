@@ -16,7 +16,7 @@ A simple and responsive web application designed to streamline and organize exam
 - **HTML5** – Structure
 - **CSS3** – Styling and responsiveness
 - **JavaScript** – Dynamic content rendering
-- **ExpressJS** -  backbone for routing, middleware integration, and handling HTTP requests and responses
+- **ExpressJS** - backbone for routing, middleware integration, and handling HTTP requests and responses
 - **NodeJS** - runtime environment for executing JavaScriptoutside thebrowser
 - **EJS** - to render HTML files
 - **Mongoose** - library for MongoDB and Node.js, enabling schema-based modeling. Mongoose is used to interact with the database
@@ -24,3 +24,5 @@ A simple and responsive web application designed to streamline and organize exam
 - **MongoDB** - NoSQL database that offers a document-oriented data model, providing a flexible alternative to traditional relational databases.
 
 ## © ayushman-svnit, jenil1236, Coder-Vineet
+
+📄[Open the PDF](jamt.pdf)
