@@ -212,6 +212,21 @@ app.get("/:id/premium",(req,res)=>{
     res.send("This is Premium page");
 });
 
+//contact us
+app.get("/:id/contactus",async (req,res)=>{
+    let {id}=req.params;
+    let user=await User.findOne({_id:id});
+    res.render("contact.ejs",{user});
+});
+
+//about us
+app.get("/:id/aboutus",async (req,res)=>{
+    let {id}=req.params;
+    let user=await User.findOne({_id:id});
+    res.render("about.ejs",{user});
+});
+
+
 //temporary path for CRUD operations during question solving
 app.post("/crud/ques/:card_id/:id",async (req,res)=>{
     let {card_id,id}=req.params;

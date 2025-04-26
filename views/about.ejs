@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head>
 </head>
@@ -24,16 +24,8 @@
             </div>
             <!-- cards -->
             <div class="content">
-                <% for(let i=0;i<cards.length;i++){ %>
-                    <div class="card">
-                        <p><b>JEE Advanced <%= cards[i].year %></b></p>
-                        <p><b>Total number of questions :&MediumSpace;</b><%= cards[i].numOfQues %></p>
-                        <p><b>Total score :&MediumSpace;</b><%= cards[i].score %></p>
-                        <form method="GET" action="/instruction/<%= cards[i]._id %>/<%= user._id %>">
-                            <p><button>START TEST</button></p>
-                        </form>
-                    </div>
-                <% } %>
+
+    
                 </div>
             </div>
             <!-- sidebar -->
