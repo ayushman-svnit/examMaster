@@ -20,10 +20,10 @@ mode.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", async () => {
     const r1 = await axios.post(`/crud/ques/${hostid}/${user_id}`);
-    ques=r1.data.Ques;
+    ques = r1.data.Ques;
     console.log(ques);
     const r2 = await axios.post(`/crud/submission/${hostid}/${user_id}`);
-    submissions=r2.data.Sub;
+    submissions = r2.data.Sub;
     console.log(submissions);
     await initialise();
 });
@@ -59,9 +59,9 @@ async function initialise() {
                 }
             )
             div.classList.add("unatm");
-            if(ques[i].subject == "math")
+            if (ques[i].subject == "math")
                 unatm_math++;
-            else if(ques[i].subject == "phy")
+            else if (ques[i].subject == "phy")
                 unatm_phy++;
             else
                 unatm_chem++;
@@ -77,9 +77,9 @@ async function initialise() {
                     }
                 )
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     correct_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     correct_phy++;
                 else
                     correct_chem++;
@@ -95,9 +95,9 @@ async function initialise() {
                 )
                 div.classList.add("incorrect");
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     incorrect_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     incorrect_phy++;
                 else
                     incorrect_chem++;
@@ -115,9 +115,9 @@ async function initialise() {
                 )
                 div.classList.add("correct");
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     correct_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     correct_phy++;
                 else
                     correct_chem++;
@@ -133,9 +133,9 @@ async function initialise() {
                 )
                 div.classList.add("incorrect");
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     incorrect_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     incorrect_phy++;
                 else
                     incorrect_chem++;
@@ -157,9 +157,9 @@ async function initialise() {
                 )
                 div.classList.add("correct");
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     correct_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     correct_phy++;
                 else
                     correct_chem++;
@@ -175,9 +175,9 @@ async function initialise() {
                 )
                 div.classList.add("incorrect");
                 div.classList.add("correct");
-                if(ques[i].subject == "math")
+                if (ques[i].subject == "math")
                     incorrect_math++;
-                else if(ques[i].subject == "phy")
+                else if (ques[i].subject == "phy")
                     incorrect_phy++;
                 else
                     incorrect_chem++;
@@ -237,8 +237,8 @@ async function initialise() {
     let percentIncorrectMath = (incorrect_math / (ques.length / 3) * 100).toFixed(5);
     let percentUnatmMath = (100 - percentCorrectMath - percentIncorrectMath).toFixed(5);
 
-    let percentCorrectPhy = (correct_phy / (ques.length / 3)* 100).toFixed(5);
-    let percentIncorrectPhy = (incorrect_phy / (ques.length / 3)* 100).toFixed(5);
+    let percentCorrectPhy = (correct_phy / (ques.length / 3) * 100).toFixed(5);
+    let percentIncorrectPhy = (incorrect_phy / (ques.length / 3) * 100).toFixed(5);
     let percentUnatmPhy = (100 - percentCorrectPhy - percentIncorrectPhy).toFixed(5);
 
     let percentCorrectChem = (correct_chem / (ques.length / 3) * 100).toFixed(5);
@@ -312,7 +312,7 @@ async function initialise() {
         div.addEventListener("click", () => {
             box.classList.toggle("box");
             let index = div.innerText - 1;
-            if(!div.classList.contains("box"))display(index);
+            if (!div.classList.contains("box")) display(index);
         });
     });
 
@@ -366,14 +366,14 @@ async function initialise() {
 
         //to display submitted input
         if (obj.quesType == 'SCQ' || obj.quesType == 'MCQ') {
-            if(S.submittedAns)
+            if (S.submittedAns)
                 document.querySelector("#userInput").innerText = `Your Answer : ${S.submittedAns}`;
             else
-            document.querySelector("#userInput").innerText = `Your Answer : -`;
+                document.querySelector("#userInput").innerText = `Your Answer : -`;
 
         }
         else {
-            if(S.submittedInput)
+            if (S.submittedInput)
                 document.querySelector("#userInput").innerText = `Your Answer : ${S.submittedInput}`;
             else
                 document.querySelector("#userInput").innerText = `Your Answer : -`;
@@ -388,35 +388,35 @@ async function initialise() {
         }
     }
 
-        // You can later change these values dynamically if needed
+    // You can later change these values dynamically if needed
 
     const ctx = document.getElementById('resultPieChart').getContext('2d');
 
     const resultPieChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Correct', 'Incorrect', 'Unattempted'],
-        datasets: [{
-        data: [correct.length, incorrect.length, unatm.length],
-        backgroundColor: ['#28a745', '#dc3545', '#6c757d'], 
-        borderColor: ['#fff', '#fff', '#fff'],
-        borderWidth: 2
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-        legend: {
-            position: 'bottom'
+        type: 'pie',
+        data: {
+            labels: ['Correct', 'Incorrect', 'Unattempted'],
+            datasets: [{
+                data: [correct.length, incorrect.length, unatm.length],
+                backgroundColor: ['#28a745', '#dc3545', '#6c757d'],
+                borderColor: ['#fff', '#fff', '#fff'],
+                borderWidth: 2
+            }]
         },
-        title: {
-            display: true,
-            text: 'Exam Result'
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'Exam Result'
+                }
+            }
         }
-        }
-    }
     });
 
     //storing score in history to display on leaderboard
-    await axios.patch(`/${user_id}/history`,{Score:score,card_id:hostid});
+    await axios.patch(`/${user_id}/history`, { Score: score, card_id: hostid });
 };

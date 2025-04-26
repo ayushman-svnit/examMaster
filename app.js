@@ -147,7 +147,6 @@ app.post("/:id/history",async (req,res)=>{
     let date=req.body.date;
     let time=req.body.time;
     let year=(await Card.findOne({_id: hostid})).year;
-    //time dalna bahi hai, because net khatam ho gaya tha
     const his=new History({
         hostid: hostid,
         user_id: id,
