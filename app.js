@@ -230,6 +230,7 @@ app.get("/:id/aboutus",async (req,res)=>{
 app.post("/crud/ques/:card_id/:id",async (req,res)=>{
     let {card_id,id}=req.params;
     let ques=await Question.find({hostid:card_id});
+    console.log(ques);
     return res.json({Ques : ques});
 });
 

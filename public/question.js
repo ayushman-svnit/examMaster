@@ -27,13 +27,14 @@ let phy=document.querySelector("#phy");
 let chem=document.querySelector("#chem");
 
 let instruction=document.querySelector("#instruction");
-let sec1="http://localhost:8000/sec-1.png";
-let sec2="http://localhost:8000/sec-2.png";
-let sec3="http://localhost:8000/sec-3.png";
+let sec1="http://localhost:3000/sec-1.png";
+let sec2="http://localhost:3000/sec-2.png";
+let sec3="http://localhost:3000/sec-3.png";
 
 let infobox=document.querySelector(".infobox");
 
 const url = new URL(form.action);
+console.log(url.pathname);
 
 mode.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
 async function initialise(){
     const res=await axios.post(`/crud${url.pathname}`);
     questions=res.data.Ques;
+    console.log(questions);
     //submissions
     for(let i=0;i<questions.length;i++){
         if(questions[i].subject==="math")mathsize++;

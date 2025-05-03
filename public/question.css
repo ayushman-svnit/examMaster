@@ -18,12 +18,7 @@ head {
     display: none;
 }
 
-<<<<<<< HEAD
 .infobox, #infobox {
-=======
-.infobox,
-#infobox {
->>>>>>> e4b886bfd7b14975f88ae49edbffb07d3c0dbfe9
     display: none;
 }
 
@@ -336,11 +331,7 @@ p {
         background: #1d4ed8;
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> e4b886bfd7b14975f88ae49edbffb07d3c0dbfe9
     .atm {
         background-color: #22c55e;
     }
